@@ -24,13 +24,19 @@
 <body>
 
 <model-viewer 
+  id="viewer"
   src="Case1.glb"
-  alt="Transradial Prosthetic Socket"
   camera-controls
-  auto-rotate
   shadow-intensity="1"
   exposure="1">
 </model-viewer>
 
+<script>
+  const viewer = document.querySelector("#viewer");
+  viewer.addEventListener("load", () => {
+    const material = viewer.model.materials[0];
+    material.pbrMetallicRoughness.setBaseColorFactor([0.0, 0.2, 0.8, 1]);
+  });
+</script>
 </body>
 </html>
