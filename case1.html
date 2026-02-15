@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Case 1 – 3D Model</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #f3f3f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    model-viewer {
+      width: 90%;
+      height: 90vh;
+      background: white;
+      border-radius: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<model-viewer 
+  src="Case1.glb"
+  alt="Transradial Prosthetic Socket"
+  camera-controls
+  auto-rotate
+  shadow-intensity="1"
+  exposure="1">
+</model-viewer>
+
+</body>
+</html>
